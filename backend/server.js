@@ -465,3 +465,9 @@ app.listen(PORT, () => {
   console.log(`      PUT    /api/acad`);
   console.log(`      GET    /api/stats\n`);
 });
+
+setInterval(() => {
+  fetch(RENDER_URL)
+    .then(() => console.log('Keep-alive ping sent'))
+    .catch(err => console.error('Keep-alive ping failed:', err));
+}, 14 * 60 * 1000);
