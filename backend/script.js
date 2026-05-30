@@ -1,7 +1,7 @@
 /* =====================================================
    CourseSim – script.js  (API version)
    All data operations now go through the REST API.
-   Backend must be running on http://localhost:3000
+   Backend must be running on https://gonzalesproject.onrender.com
    ===================================================== */
 
 const API = "https://gonzalesproject.onrender.com";
