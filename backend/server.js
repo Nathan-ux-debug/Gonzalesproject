@@ -470,7 +470,7 @@ app.listen(PORT, () => {
 });
 
 setInterval(() => {
-  fetch(RENDER_URL)
+  fetch('https://gonzalesproject.onrender.com')
     .then(() => console.log('Keep-alive ping sent'))
     .catch(err => console.error('Keep-alive ping failed:', err));
 }, 14 * 60 * 1000);
