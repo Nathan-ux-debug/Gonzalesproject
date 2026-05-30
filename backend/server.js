@@ -16,6 +16,7 @@ const PORT = process.env.PORT || 3000;
 // ── Middleware ────────────────────────────────────────────────
 app.use(cors());          // allow requests from the browser frontend
 app.use(express.json());  // parse JSON request bodies
+app.use(express.static(path.join(__dirname, '..')));
 
 // ── File helpers ──────────────────────────────────────────────
 const dataPath = (file) => path.join(__dirname, "data", file);
