@@ -14,7 +14,10 @@ const app  = express();
 const PORT = process.env.PORT || 3000;
 
 // ── Middleware ────────────────────────────────────────────────
-app.use(cors());          // allow requests from the browser frontend
+app.use(cors({
+  origin: 'https://gonzalesproject.onrender.com',
+  credentials: true
+}));
 app.use(express.json());  // parse JSON request bodies
 app.use(express.static(path.join(__dirname, '..')));
 
